@@ -1,14 +1,40 @@
 #include <stdio.h>
 #include "SequentialAccess.h"
+#include "Delimited.h"
 
 int main()
 {
+    const char delimitedFile[] = "file.csv";
+    const char sequentialFile[] = "SequentialAccess.dat";
+
+    struct productData smartPhone = { 1, "Smartphone", "Electronics", 50, 699.99 };
+    struct productData laptop = { 2, "Laptop", "Electronics", 30, 999.99 };
+    struct productData tablet = { 3, "Tablet", "Electronics", 20, 299.99 };
+
+    appendFile(&smartPhone, delimitedFile);
+
+    appendFile(&laptop, delimitedFile);
+
+    readFile(delimitedFile);
+
+    deleteFileContentsById(delimitedFile, '2');
+
+    readFile(delimitedFile);
+
+    appendFile(&laptop, delimitedFile);
+
+    readFile(delimitedFile);
+
+    updateFileById(&tablet, delimitedFile, '2');
+
+    readFile(delimitedFile);
+
+    deleteFile(delimitedFile);
+
     const char* filename = "SequencialAccess.dat";
 
-    
     remove(filename);
 
-    
     Data data1 = { 1, "Smartphone", "Electronics", 50, 699.99 };
     Data data2 = { 2, "Laptop", "Electronics", 30, 999.99 };
     Data data3 = { 3, "Tablet", "Electronics", 20, 299.99 };
