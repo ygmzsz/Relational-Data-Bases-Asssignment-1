@@ -7,8 +7,6 @@ int main()
 {
     const char* filename = "SequencialAccess.dat";
 
-    remove(filename);
-
     Data data1 = { 1, "Smartphone", "Electronics", 50, 699.99 };
     Data data2 = { 2, "Laptop", "Electronics", 30, 999.99 };
     Data data3 = { 3, "Tablet", "Electronics", 20, 299.99 };
