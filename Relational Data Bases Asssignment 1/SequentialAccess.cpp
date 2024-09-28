@@ -4,9 +4,10 @@
 
 #pragma warning(disable: 4996)
 
+
 void SequentialReadData(const char* filename)
 {
-    FILE* file = fopen(filename, "rb");  // Open in binary read mode
+    FILE* file = fopen(filename, "rb"); 
     if (file == NULL)
     {
         printf("ERROR: Something went wrong while opening the file\n");
@@ -28,7 +29,7 @@ void SequentialReadData(const char* filename)
 
 
 void SequentialAddData(const char* filename, Data data) {
-    FILE* file = fopen(filename, "ab");  // Append in binary mode
+    FILE* file = fopen(filename, "ab");  
     if (file == NULL)
     {
         printf("ERROR: Something went wrong while opening the file\n");
@@ -53,18 +54,16 @@ void SequentialUpdateData(const char* filename, Data data, int itemId)
     {
         if (temp.id == itemId)
         {
-            fseek(file, -(long)sizeof(Data), SEEK_CUR);  
-            fwrite(&data, sizeof(Data), 1, file);        
+            fseek(file, -(long)sizeof(Data), SEEK_CUR); 
+            fwrite(&data, sizeof(Data), 1, file);       
             break;
         }
     }
     fclose(file);
 }
-
-
 void SequentialDeleteData(const char* filename, int itemId)
 {
-    FILE* file = fopen(filename, "rb"); 
+    FILE* file = fopen(filename, "rb");  
     if (file == NULL)
     {
         printf("ERROR: Something went wrong while opening the file\n");
@@ -100,13 +99,13 @@ void SequentialDeleteData(const char* filename, int itemId)
 
     if (found)
     {
-        remove(filename); 
+        remove(filename);  
         rename("temp.bin", filename);  
         printf("Item with ID %d deleted successfully.\n", itemId);
     }
     else
     {
         printf("Item with ID %d not found.\n");
-        remove("temp.bin");  
+        remove("temp.bin"); 
     }
 }
