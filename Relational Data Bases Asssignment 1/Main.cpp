@@ -5,7 +5,6 @@
 int main()
 {
     const char delimitedFile[] = "file.csv";
-    const char sequentialFile[] = "SequentialAccess.dat";
 
     struct productData smartPhone = { 1, "Smartphone", "Electronics", 50, 699.99 };
     struct productData laptop = { 2, "Laptop", "Electronics", 30, 999.99 };
