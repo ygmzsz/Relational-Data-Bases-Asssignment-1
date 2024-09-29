@@ -24,12 +24,18 @@
     <ClCompile Include="Delimited.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RandomAccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SequentialAccess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Delimited.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomAccess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

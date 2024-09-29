@@ -129,10 +129,12 @@
   <ItemGroup>
     <ClCompile Include="Delimited.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="RandomAccess.cpp" />
     <ClCompile Include="SequentialAccess.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Delimited.h" />
+    <ClInclude Include="RandomAccess.h" />
     <ClInclude Include="SequentialAccess.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

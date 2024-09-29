@@ -133,5 +133,3 @@ void deleteFile(const char* fileName)
 
 	}
 }
-
-\
